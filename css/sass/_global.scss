@@ -14,24 +14,21 @@ section div {
 }
 
 .hero {
-  height: $vertical-measure * 16;
-  background-color: $gray60;
-}
-
-[role="banner"],
-.partner-quotes,
-.executive-team,
-.offset-columns,
-[role="contentinfo"] {
+  margin-bottom: $vertical-measure;
   background-color: $gray10;
 
-  div {
-    background-color: $gray30;
+  .product-image {
+    height: $vertical-measure * 8;
+    background-color: $gray60;
   }
 }
 
+.partner-quotes div {
+  background-color: $gray10;
+}
+
 [role="contentinfo"] {
-  padding: 0.45em 0; // tweak to align contained elements to baseline
+  padding: 0.5em 0;
   text-align: center;
 
   p {
@@ -39,12 +36,12 @@ section div {
   }
 }
 
+// get grid styles in gear once viewport is large enough ========================================= /
 @media screen and (min-width: 36em) {
 
   .partner-quotes,
-  .executive-team,
-  .offset-columns {
-    @include row; // don't behave like rows until the viewport is wider than 36ems
+  .executive-team {
+    @include row;
     margin-bottom: $vertical-measure;
   }
 
@@ -57,13 +54,21 @@ section div {
   }
 
   .hero {
-    margin-bottom: $vertical-measure;
+    @include clearfix;
+
+    .product-image {
+      height: $vertical-measure * 16;
+      width: columns(4);
+      @include offset(left, 1);
+    }
   }
 
   .partner-quotes {
+
     div {
       width: columns(1);
     }
+
     .twain {
       @include last;
     }
@@ -97,17 +102,6 @@ section div {
       .cio {
         @include last;
       }
-    }
-  }
-
-  .offset-columns {
-    .first-offset {
-      @include offset(left, 1);
-      width: columns(1);
-    }
-    .second-offset {
-      @include offset(right, 2);
-      width: columns(2);
     }
   }
 }

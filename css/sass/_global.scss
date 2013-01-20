@@ -1,0 +1,161 @@
+/* =================================================================================================
+Global styles
+================================================================================================= */
+
+// set up body and container padding/widths/etc ================================================== /
+body { padding: 0 1em; margin: 0; }
+.container { width: 100%; max-width: $max-width; margin: 0 auto; padding: 0; }
+// do not use the row mixin for your container. the direct child selectors will bork everything
+
+
+// declare non-grid-related styles for your elements ============================================= /
+section div {
+  padding: 1em 0;
+}
+
+.hero {
+  height: $vertical-measure * 10;
+  background-color: $gray60;
+}
+
+[role="banner"],
+.two-columns,
+.six-columns,
+.varying-columns,
+.nested-columns,
+.more-nested-columns,
+.offset-columns,
+[role="contentinfo"] {
+  background-color: $gray10;
+
+  div {
+    background-color: $gray30;
+  }
+  .nested {
+    background-color: transparent;
+
+    div {
+      background-color: $gray50;
+    }
+  }
+}
+
+[role="contentinfo"] {
+  padding: 0.45em 0; // tweak to align contained elements to baseline
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 36em) {
+
+  .two-columns,
+  .six-columns,
+  .varying-columns,
+  .nested-columns,
+  .more-nested-columns,
+  .offset-columns {
+    @include row; // don't behave like rows until the viewport is wider than 36ems
+    margin-bottom: $vertical-measure;
+  }
+
+  [role="banner"] {
+    margin-bottom: $vertical-measure;
+  }
+
+  section div {
+    padding: 1.8em 1em 0.93em 1em;
+  }
+
+  .hero {
+    margin-bottom: $vertical-measure;
+  }
+
+  .two-columns {
+    div {
+      width: columns(3);
+    }
+    .right-column {
+      @include last;
+    }
+  }
+
+  .six-columns {
+    div {
+      width: columns(1);
+    }
+    .sixth-column {
+      @include last;
+    }
+  }
+
+  .varying-columns {
+    .first-column {
+      width: columns(1);
+    }
+    .second-column {
+      width: columns(2);
+    }
+    .third-column {
+      width: columns(3);
+    }
+    .third-column {
+      @include last;
+    }
+  }
+
+  .nested-columns {
+    .nested {
+      @include nesting;
+      width: columns(3);
+
+      div {
+        width: columns(1, 3);
+        margin-right: gutter(3);
+      }
+      .third-nested {
+        @include last;
+      }
+    }
+    .unnested {
+      width: columns(3);
+      @include last;
+    }
+  }
+
+  .more-nested-columns {
+    .first-unnested {
+      width: columns(2);
+    }
+    .nested {
+      @include nesting;
+      width: columns(3);
+
+      div {
+        width: columns(1, 3);
+        margin-right: gutter(3);
+      }
+      .second-nested {
+        width: columns(2, 3);
+        @include last;
+      }
+    }
+    .second-unnested {
+      width: columns(1);
+      @include last;
+    }
+  }
+
+  .offset-columns {
+    .first-offset {
+      @include offset(left, 1);
+      width: columns(1);
+    }
+    .second-offset {
+      @include offset(right, 2);
+      width: columns(2);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/* =================================================================================================
+Typography - limited rules for just this tutorial rather than a complete set
+================================================================================================= */
+
+body {
+  font-family: $font-family;
+  line-height: $line-height;
+}
+
+p {
+  margin: 0 0 $vertical-measure 0; // set bottom margin equal to line-height/vertical measure
+  font-size: 1em;
+  line-height: $line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+  color: $base-color;
+  text-rendering: optimizelegibility;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 2.05; // tweak to align h1 to baseline within container
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 3.1; // tweak to align h2 to baseline within container
+  margin-bottom: -0.32em; // tweak to align h2 to baseline within container
+}

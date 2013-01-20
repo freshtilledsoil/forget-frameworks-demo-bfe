@@ -1,0 +1,5 @@
+@import 'variables';  // global variables first so they're accessible to rest of stylesheets
+@import 'mixins';     // global mixins next to use variables and be accessible to rest of stylesheets
+@import 'typography'; // base typographic system is established next
+@import 'grid';       // grid system functions and mixins will all be defined here
+@import 'global';     // global style rules are defined last so they can use all the previous sheets

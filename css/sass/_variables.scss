@@ -1,0 +1,20 @@
+// Variables ===================================================================================== /
+
+// White - Grays - Black
+$black:                       hsl(0, 0%, 0%);
+$gray90:                      hsl(0, 0%, 10%);
+$gray80:                      hsl(0, 0%, 20%);
+$gray70:                      hsl(0, 0%, 30%);
+$gray60:                      hsl(0, 0%, 40%);
+$gray50:                      hsl(0, 0%, 50%);
+$gray40:                      hsl(0, 0%, 60%);
+$gray30:                      hsl(0, 0%, 70%);
+$gray20:                      hsl(0, 0%, 80%);
+$gray10:                      hsl(0, 0%, 90%);
+$white:                       hsl(0, 0%, 100%);
+
+// Typography variables
+$base-color:                  $black;
+$font-family:                 sans-serif;
+$line-height:                 1.375; // establish a consistent line-height equal to 22px
+$vertical-measure:            1.375em; // establish a vertical distance for margins equal to line-height

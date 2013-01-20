@@ -1,0 +1,217 @@
+/* =================================================================================================
+Typography - limited rules for just this tutorial rather than a complete set
+================================================================================================= */
+body {
+  font-family: sans-serif;
+  line-height: 1.375; }
+
+p {
+  margin: 0 0 1.375em 0;
+  font-size: 1em;
+  line-height: 1.375; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+  color: black;
+  text-rendering: optimizelegibility; }
+
+h1 {
+  font-size: 2em;
+  line-height: 2.05; }
+
+h2 {
+  font-size: 1.5em;
+  line-height: 3.1;
+  margin-bottom: -0.32em; }
+
+/* =================================================================================================
+Global styles
+================================================================================================= */
+body {
+  padding: 0 1em;
+  margin: 0; }
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0; }
+
+section div {
+  padding: 1em 0; }
+
+.hero {
+  height: 13.75em;
+  background-color: #666666; }
+
+[role="banner"],
+.two-columns,
+.six-columns,
+.varying-columns,
+.nested-columns,
+.more-nested-columns,
+.offset-columns,
+[role="contentinfo"] {
+  background-color: #e6e6e6; }
+  [role="banner"] div,
+  .two-columns div,
+  .six-columns div,
+  .varying-columns div,
+  .nested-columns div,
+  .more-nested-columns div,
+  .offset-columns div,
+  [role="contentinfo"] div {
+    background-color: #b3b3b3; }
+  [role="banner"] .nested,
+  .two-columns .nested,
+  .six-columns .nested,
+  .varying-columns .nested,
+  .nested-columns .nested,
+  .more-nested-columns .nested,
+  .offset-columns .nested,
+  [role="contentinfo"] .nested {
+    background-color: transparent; }
+    [role="banner"] .nested div,
+    .two-columns .nested div,
+    .six-columns .nested div,
+    .varying-columns .nested div,
+    .nested-columns .nested div,
+    .more-nested-columns .nested div,
+    .offset-columns .nested div,
+    [role="contentinfo"] .nested div {
+      background-color: gray; }
+
+[role="contentinfo"] {
+  padding: 0.45em 0;
+  text-align: center; }
+  [role="contentinfo"] p {
+    margin: 0; }
+
+@media screen and (min-width: 36em) {
+  .two-columns,
+  .six-columns,
+  .varying-columns,
+  .nested-columns,
+  .more-nested-columns,
+  .offset-columns {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    zoom: 1;
+    padding: 0;
+    margin-bottom: 1.375em; }
+    .two-columns:before, .two-columns:after,
+    .six-columns:before,
+    .six-columns:after,
+    .varying-columns:before,
+    .varying-columns:after,
+    .nested-columns:before,
+    .nested-columns:after,
+    .more-nested-columns:before,
+    .more-nested-columns:after,
+    .offset-columns:before,
+    .offset-columns:after {
+      content: "";
+      display: table; }
+    .two-columns:after,
+    .six-columns:after,
+    .varying-columns:after,
+    .nested-columns:after,
+    .more-nested-columns:after,
+    .offset-columns:after {
+      clear: both; }
+    .two-columns > div,
+    .six-columns > div,
+    .varying-columns > div,
+    .nested-columns > div,
+    .more-nested-columns > div,
+    .offset-columns > div {
+      float: left;
+      margin-right: 2%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+
+  [role="banner"] {
+    margin-bottom: 1.375em; }
+
+  section div {
+    padding: 1.8em 1em 0.93em 1em; }
+
+  .hero {
+    margin-bottom: 1.375em; }
+
+  .two-columns div {
+    width: 49%; }
+  .two-columns .right-column {
+    margin-right: 0;
+    float: right; }
+
+  .six-columns div {
+    width: 15%; }
+  .six-columns .sixth-column {
+    margin-right: 0;
+    float: right; }
+
+  .varying-columns .first-column {
+    width: 15%; }
+  .varying-columns .second-column {
+    width: 32%; }
+  .varying-columns .third-column {
+    width: 49%; }
+  .varying-columns .third-column {
+    margin-right: 0;
+    float: right; }
+
+  .nested-columns .nested {
+    padding: 0;
+    width: 49%; }
+    .nested-columns .nested > div {
+      float: left;
+      margin-right: 2%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    .nested-columns .nested div {
+      width: 30.61224%;
+      margin-right: 4.08163%; }
+    .nested-columns .nested .third-nested {
+      margin-right: 0;
+      float: right; }
+  .nested-columns .unnested {
+    width: 49%;
+    margin-right: 0;
+    float: right; }
+
+  .more-nested-columns .first-unnested {
+    width: 32%; }
+  .more-nested-columns .nested {
+    padding: 0;
+    width: 49%; }
+    .more-nested-columns .nested > div {
+      float: left;
+      margin-right: 2%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    .more-nested-columns .nested div {
+      width: 30.61224%;
+      margin-right: 4.08163%; }
+    .more-nested-columns .nested .second-nested {
+      width: 65.30612%;
+      margin-right: 0;
+      float: right; }
+  .more-nested-columns .second-unnested {
+    width: 15%;
+    margin-right: 0;
+    float: right; }
+
+  .offset-columns .first-offset {
+    float: left;
+    margin-left: 17%;
+    width: 15%; }
+  .offset-columns .second-offset {
+    float: right;
+    margin-right: 34%;
+    width: 32%; } }

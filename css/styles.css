@@ -42,45 +42,21 @@ section div {
   padding: 1em 0; }
 
 .hero {
-  height: 13.75em;
+  height: 22em;
   background-color: #666666; }
 
 [role="banner"],
-.two-columns,
-.six-columns,
-.varying-columns,
-.nested-columns,
-.more-nested-columns,
+.partner-quotes,
+.executive-team,
 .offset-columns,
 [role="contentinfo"] {
   background-color: #e6e6e6; }
   [role="banner"] div,
-  .two-columns div,
-  .six-columns div,
-  .varying-columns div,
-  .nested-columns div,
-  .more-nested-columns div,
+  .partner-quotes div,
+  .executive-team div,
   .offset-columns div,
   [role="contentinfo"] div {
     background-color: #b3b3b3; }
-  [role="banner"] .nested,
-  .two-columns .nested,
-  .six-columns .nested,
-  .varying-columns .nested,
-  .nested-columns .nested,
-  .more-nested-columns .nested,
-  .offset-columns .nested,
-  [role="contentinfo"] .nested {
-    background-color: transparent; }
-    [role="banner"] .nested div,
-    .two-columns .nested div,
-    .six-columns .nested div,
-    .varying-columns .nested div,
-    .nested-columns .nested div,
-    .more-nested-columns .nested div,
-    .offset-columns .nested div,
-    [role="contentinfo"] .nested div {
-      background-color: gray; }
 
 [role="contentinfo"] {
   padding: 0.45em 0;
@@ -89,11 +65,8 @@ section div {
     margin: 0; }
 
 @media screen and (min-width: 36em) {
-  .two-columns,
-  .six-columns,
-  .varying-columns,
-  .nested-columns,
-  .more-nested-columns,
+  .partner-quotes,
+  .executive-team,
   .offset-columns {
     width: 100%;
     max-width: 1000px;
@@ -101,31 +74,19 @@ section div {
     zoom: 1;
     padding: 0;
     margin-bottom: 1.375em; }
-    .two-columns:before, .two-columns:after,
-    .six-columns:before,
-    .six-columns:after,
-    .varying-columns:before,
-    .varying-columns:after,
-    .nested-columns:before,
-    .nested-columns:after,
-    .more-nested-columns:before,
-    .more-nested-columns:after,
+    .partner-quotes:before, .partner-quotes:after,
+    .executive-team:before,
+    .executive-team:after,
     .offset-columns:before,
     .offset-columns:after {
       content: "";
       display: table; }
-    .two-columns:after,
-    .six-columns:after,
-    .varying-columns:after,
-    .nested-columns:after,
-    .more-nested-columns:after,
+    .partner-quotes:after,
+    .executive-team:after,
     .offset-columns:after {
       clear: both; }
-    .two-columns > div,
-    .six-columns > div,
-    .varying-columns > div,
-    .nested-columns > div,
-    .more-nested-columns > div,
+    .partner-quotes > div,
+    .executive-team > div,
     .offset-columns > div {
       float: left;
       margin-right: 2%;
@@ -142,70 +103,31 @@ section div {
   .hero {
     margin-bottom: 1.375em; }
 
-  .two-columns div {
-    width: 49%; }
-  .two-columns .right-column {
+  .partner-quotes div {
+    width: 15%; }
+  .partner-quotes .twain {
     margin-right: 0;
     float: right; }
 
-  .six-columns div {
-    width: 15%; }
-  .six-columns .sixth-column {
-    margin-right: 0;
-    float: right; }
-
-  .varying-columns .first-column {
-    width: 15%; }
-  .varying-columns .second-column {
+  .executive-team .ceo {
     width: 32%; }
-  .varying-columns .third-column {
-    width: 49%; }
-  .varying-columns .third-column {
+  .executive-team .other-executives {
+    width: 66%;
+    padding: 0;
     margin-right: 0;
     float: right; }
-
-  .nested-columns .nested {
-    padding: 0;
-    width: 49%; }
-    .nested-columns .nested > div {
+    .executive-team .other-executives > div {
       float: left;
       margin-right: 2%;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
-    .nested-columns .nested div {
-      width: 30.61224%;
-      margin-right: 4.08163%; }
-    .nested-columns .nested .third-nested {
+    .executive-team .other-executives div {
+      width: 22.72727%;
+      margin-right: 3.0303%; }
+    .executive-team .other-executives .cio {
       margin-right: 0;
       float: right; }
-  .nested-columns .unnested {
-    width: 49%;
-    margin-right: 0;
-    float: right; }
-
-  .more-nested-columns .first-unnested {
-    width: 32%; }
-  .more-nested-columns .nested {
-    padding: 0;
-    width: 49%; }
-    .more-nested-columns .nested > div {
-      float: left;
-      margin-right: 2%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box; }
-    .more-nested-columns .nested div {
-      width: 30.61224%;
-      margin-right: 4.08163%; }
-    .more-nested-columns .nested .second-nested {
-      width: 65.30612%;
-      margin-right: 0;
-      float: right; }
-  .more-nested-columns .second-unnested {
-    width: 15%;
-    margin-right: 0;
-    float: right; }
 
   .offset-columns .first-offset {
     float: left;

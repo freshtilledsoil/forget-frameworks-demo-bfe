@@ -109,6 +109,11 @@ section div {
     margin-right: 0;
     float: right; }
 
+  .executive-team div {
+    padding: 0; }
+    .executive-team div img {
+      width: 100%;
+      max-width: 100%; }
   .executive-team .ceo {
     width: 32%; }
   .executive-team .other-executives {

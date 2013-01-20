@@ -70,9 +70,20 @@ section div {
   }
 
   .executive-team {
+
+    div {
+      padding: 0;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
     .ceo {
       width: columns(2);
     }
+
     .other-executives {
       width: columns(4);
       @include nesting;

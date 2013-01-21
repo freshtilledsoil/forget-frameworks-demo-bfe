@@ -16,5 +16,11 @@ $white:                       hsl(0, 0%, 100%);
 // Typography variables
 $base-color:                  $black;
 $font-family:                 sans-serif;
-$line-height:                 1.375; // establish a consistent line-height equal to 22px
-$vertical-measure:            1.375em; // establish a vertical distance for margins equal to line-height
+$line-height:                 1.375;      // establish a consistent line-height equal to 22px
+$vertical-measure:            1.375em;    // establish a vertical distance for margins equal to line-height
+
+// Grid variables
+$max-width:       1000px;                 // set page max-width
+$column-width:    15%;                    // set column width
+$gutter-width:    2%;                     // set gutter width
+$maximum-columns: 6;                      // set max number of columns

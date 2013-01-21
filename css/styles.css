@@ -46,7 +46,8 @@ section div {
   background-color: #e6e6e6; }
   .hero .product-image {
     height: 11em;
-    background-color: #666666; }
+    background-color: #666666;
+    padding: 0; }
 
 .partner-quotes div {
   background-color: #e6e6e6; }

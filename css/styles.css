@@ -38,6 +38,9 @@ body {
   margin: 0 auto;
   padding: 0; }
 
+img {
+  max-width: 100%; }
+
 section div {
   padding: 1em 0; }
 

@@ -6,7 +6,7 @@ Global styles
 body { padding: 0 1em; margin: 0; }
 .container { width: 100%; max-width: $max-width; margin: 0 auto; padding: 0; }
 // do not use the row mixin for your container. the direct child selectors will bork everything
-
+img { max-width: 100%; }
 
 // declare non-grid-related styles for your elements ============================================= /
 section div {
